@@ -1,10 +1,10 @@
 import AvatarImg from "../../assets/images/mohan-muruge.jpg"
 
-function Header () {
+function Header() {
     return (
-    <header className ="brainflix-header">
-        <img className ="brainflix-header__img" src={AvatarImg} alt="mohan-muruge"/>
-    </header>
+        <header className ="brainflix-header">
+            <img className ="brainflix-header__img" src={AvatarImg} alt="mohan-muruge"/>
+        </header>
     );
 }
 
