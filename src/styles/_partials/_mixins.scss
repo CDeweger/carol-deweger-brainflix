@@ -32,3 +32,10 @@
   align-items: $align-items;
   flex-direction: $flex-direction;
 }
+
+//button style
+@mixin button {
+  background-color: $primary-color2;
+  color: $primary-color4;
+  @include font-regular();
+}
