@@ -22,19 +22,23 @@ p {
   @include flex(_, center, _);
   flex-wrap: wrap;
   margin: 1rem;
+  @include tablet {
+    @include flex(center, center, _);
+  }
 
   &__logo-container {
     width: 100%;
     margin: 0 30% 1rem 30%;
     @include tablet {
-      width: 0;
-      margin: 0 3rem 0 1rem;
+      width: 16vw;
+      margin: 0 5.5rem 0 1rem;
     }
 
     &--logo {
       width: 35vw;
       @include tablet {
-        width: 18vw;
+        width: 16vw;
+        margin-left: -4rem;
       }
     }
   }
@@ -43,13 +47,17 @@ p {
     width: 85%;
     position: relative;
     @include tablet {
-      width: 30%;
+      width: 32%;
+      margin-left: -2rem;
     }
     &--icon {
       position: absolute;
       top: 25%;
       left: 5%;
       width: 1.4rem;
+      @include tablet {
+        width: 1.2rem;
+      }
     }
     &--input {
       width: 100%;
@@ -57,11 +65,18 @@ p {
       border-radius: 5px;
       border: $secondary-color3 1px solid;
       background-color: $secondary-color4;
+      @include tablet {
+        padding: 0.8rem 0;
+      }
     }
     ::placeholder {
       font-size: 1rem;
       padding-left: 3rem;
       color: $primary-color1;
+      @include tablet {
+        font-size: 0.8rem;
+        padding-left: 2.5rem;
+      }
     }
   }
 
@@ -74,8 +89,11 @@ p {
     position: relative;
     @include flex(center, center, _);
     @include tablet {
-      width: 30%;
+      width: 22%;
       margin-top: 0;
+      margin-left: -1.4rem;
+      padding: 0.8rem 2rem;
+      font-size: 0.8rem;
     }
     &--icon {
       position: absolute;
@@ -86,7 +104,7 @@ p {
     width: 2.7rem;
     height: 2.7rem;
     border-radius: 25px;
-    position: relative; //
+    //position: relative;
     &--img {
       @extend .brainflix-header__container;
       object-fit: cover;
@@ -95,7 +113,11 @@ p {
 
       @include tablet {
         position: absolute;
-        left: 850%;
+        right: 3%;
+        width: 2.5rem;
+        height: 2.5rem;
+
+        //left: 500%;
       }
     }
   }
