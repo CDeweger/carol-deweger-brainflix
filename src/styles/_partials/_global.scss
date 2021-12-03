@@ -33,12 +33,19 @@ p {
       width: 16vw;
       margin: 0 5.5rem 0 1rem;
     }
+    @include desktop {
+      width: 20vw;
+    }
 
     &--logo {
       width: 35vw;
       @include tablet {
         width: 16vw;
         margin-left: -4rem;
+      }
+      @include desktop {
+        width: 10vw;
+        margin-left: -15rem;
       }
     }
   }
@@ -49,6 +56,9 @@ p {
     @include tablet {
       width: 32%;
       margin-left: -2rem;
+    }
+    @include desktop {
+      width: 20%;
     }
     &--icon {
       position: absolute;
@@ -67,6 +77,8 @@ p {
       background-color: $secondary-color4;
       @include tablet {
         padding: 0.8rem 0;
+      }
+      @include desktop {
       }
     }
     ::placeholder {
@@ -95,6 +107,10 @@ p {
       padding: 0.8rem 2rem;
       font-size: 0.8rem;
     }
+    @include desktop {
+      width: 12%;
+      margin-right: -10rem;
+    }
     &--icon {
       position: absolute;
       left: 3%;
@@ -116,8 +132,10 @@ p {
         right: 3%;
         width: 2.5rem;
         height: 2.5rem;
+      }
 
-        //left: 500%;
+      @include desktop {
+        right: 9%;
       }
     }
   }
