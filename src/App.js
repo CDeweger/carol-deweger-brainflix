@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import VideoNav from "./components/VideoNav/VideoNav";
 import VideoDetails from './components/VideoDetails/VideoDetails';
 import Comments from './components/Comments/Comments';
+import Form from './components/Form/Form';
 import './styles/_partials/_global.scss';
 
 class App extends React.Component {
@@ -34,13 +35,12 @@ class App extends React.Component {
       <div>
        <Header/> 
        <VideoDetails selectedVideo={this.state.selectedVideo}/>
+       <Form selectedVideoComments={this.state.selectedVideo.comments} />
+       <Comments selectedVideoComments={this.state.selectedVideo.comments} />
        <VideoNav 
-       //videos={this.state.videos}
        videos={videoNavVideos}
        onVideoSelect={this.handleVideoSelect}
-       //selectedVideo={videoDetails[0]}
        />
-       <Comments selectedVideoComments={this.state.selectedVideo.comments} />
 
      </div>
     );
