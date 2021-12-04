@@ -1,15 +1,17 @@
 import React from 'react';
 import './VideoNav.scss'
 import VideoNavItem from'../../components/VideoNavItem/VideoNavItem'
-import VideoDetails from '../VideoDetails/VideoDetails';
 
 
 const VideoNav = (props) => {
 
-  //console.log(props);
+  console.log(props);
+
+  const videoNavVideos = props.videos.filter(video => video.id !== props.selectedVideo.id);
+console.log(videoNavVideos);
   return (
     <div className ="video-nav">
-      {props.videos.map(video => {
+       {videoNavVideos.map(video => {
         return (
            
            <VideoNavItem
@@ -20,7 +22,7 @@ const VideoNav = (props) => {
            onVideoSelect={props.onVideoSelect}
            />
         )
-      })}
+      })} 
     </div>
   );
 }

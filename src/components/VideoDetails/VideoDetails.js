@@ -2,7 +2,6 @@ import React from 'react';
 
 const VideoDetails = (props) => {
 
-    console.log(props);
     return (
         <>
          <div>

@@ -1,24 +1,23 @@
 import React from 'react';
 
 const VideoNavItem = (props) => {
-    const handleVideoSelect = e => {
-        e.preventDefault();
-        props.onVideoSelect(props.id);
-        //console.log(e);
-    }
+    console.log(props);
+    // const handleVideoSelect = e => {
+    //     e.preventDefault();
+    //     props.onVideoSelect(props.id);
+        
+    // }
+    
 
     return (
         <>
-       
-            {/* <button onClick={handleVideoSelect}>{props.name}</button> */}
         <div>
-            <video onClick={handleVideoSelect} width ="20%vw" height="auto" poster = {props.image}> </video>
+            <video onClick={(props.key)=> props.onVideoSelect(props.ke) } width ="20%vw" height="auto" poster = {props.image}> </video>
         </div>
         <div>
             <p>{props.title}</p>
             <p>{props.channel}</p>
         </div>
-
         </>
       );
     };
