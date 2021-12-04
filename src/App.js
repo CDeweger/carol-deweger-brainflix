@@ -7,7 +7,6 @@ import VideoDetails from './components/VideoDetails/VideoDetails';
 import Comments from './components/Comments/Comments';
 import './styles/_partials/_global.scss';
 
-console.log(videoDetails);
 class App extends React.Component {
 
   state ={
@@ -28,16 +27,20 @@ class App extends React.Component {
   render (){
     const videoNavVideos = videoData.filter(video => video.id !== this.state.selectedVideo.id);
 
+    
+
+    
     return (
       <div>
        <Header/> 
        <VideoDetails selectedVideo={this.state.selectedVideo}/>
        <VideoNav 
-       videos={this.state.videos}
-       //videos={videoNavVideos}
+       //videos={this.state.videos}
+       videos={videoNavVideos}
        onVideoSelect={this.handleVideoSelect}
-       selectedVideo={videoDetails[0]}/>
-       <Comments onVideoSelect={this.handleVideoSelect} videoDetails={videoDetails}/>
+       //selectedVideo={videoDetails[0]}
+       />
+       <Comments selectedVideoComments={this.state.selectedVideo.comments} />
 
      </div>
     );

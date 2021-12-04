@@ -5,13 +5,10 @@ import VideoNavItem from'../../components/VideoNavItem/VideoNavItem'
 
 const VideoNav = (props) => {
 
-  console.log(props);
 
-  const videoNavVideos = props.videos.filter(video => video.id !== props.selectedVideo.id);
-console.log(videoNavVideos);
   return (
     <div className ="video-nav">
-       {videoNavVideos.map(video => {
+       {props.videos.map(video => {
         return (
            
            <VideoNavItem
@@ -20,6 +17,7 @@ console.log(videoNavVideos);
            channel={video.channel}
            image={video.image}
            onVideoSelect={props.onVideoSelect}
+           videoId={video.id}
            />
         )
       })} 

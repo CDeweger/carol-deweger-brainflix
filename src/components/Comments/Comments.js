@@ -4,15 +4,22 @@ const Comments = (props) => {
     console.log(props);
 
     return (
-    
-        <h1>hello</h1>
-        // {props.videoDetails.forEach((videoDetail => {
-        //     return (
-        //         <div>{videoDetail.comments}</div>
-        //     )
-        // }
-     )
+    props.selectedVideoComments.map(selectedVideoComment => 
+        <>
+        <p>
+        {selectedVideoComment.name}
+                </p>
+        <p>
+{selectedVideoComment.comment}
+        </p>
         
+      
+        </>
+
+
+)
+     
+    )    
 }
 
 
