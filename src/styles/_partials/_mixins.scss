@@ -7,6 +7,10 @@
   font-weight: 400;
 }
 
+@mixin font-demi {
+  font-family: "Avenir-Next";
+  font-weight: 600;
+}
 @mixin font-bold {
   font-family: "Avenir-Next";
   font-weight: 700;
