@@ -20,7 +20,7 @@ function Header() {
             </div>        
             <div className ="brainflix-header__button">
                 <img className ="brainflix-header__button--icon" src={uploadIcon} alt="upload"/>
-                <p className ="brainflix-header__button--upload">UPLOAD</p>
+                <input className ="brainflix-header__button--upload" type="submit" value="UPLOAD"></input>
             </div> 
         </header>
       

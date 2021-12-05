@@ -3,9 +3,6 @@ import './Comments.scss'
 
 
 const Comments = (props) => {
-        // const timestampString = (props.selectedVideoComment.timestamp);
-        // const dateObject = new Date(timestampString);
-        // const humanReadableDateFormat = dateObject.toLocaleString("en-US", { month: "2-digit" , day: "2-digit", year: "numeric"});
     return (
     props.selectedVideoComments.map(selectedVideoComment => 
 
@@ -15,7 +12,7 @@ const Comments = (props) => {
             <div className="comment-box__content-box">
               <div className="comment-box__content-box-name-time">
                 <p className="comment-box__content-box--name">{selectedVideoComment.name}</p>
-                <p className="comment-box__content-box--time">{selectedVideoComment.timestamp}</p>
+                <p className="comment-box__content-box--time">{(new Date(selectedVideoComment.timestamp)).toLocaleString("en-US", { month: "2-digit" , day: "2-digit", year: "numeric"})}</p>
               </div>
               <p className="comment-box__comment">{selectedVideoComment.comment}</p>
             </div>
@@ -29,7 +26,7 @@ const Comments = (props) => {
 
 export default Comments;
 
-//print the comments that are from the selected video
+// how to print the comments that are from the selected video??
 //step 1 -  find what video is currently selected
 //step 2 - map the 3 comments in the selected video
 //step 3 - print the comments

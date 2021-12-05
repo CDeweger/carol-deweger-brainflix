@@ -94,10 +94,7 @@ p {
   }
 
   &__button {
-    @include button;
     width: 100%;
-    margin-top: 1.3rem;
-    padding: 1rem 3rem;
     position: relative;
     @include flex(center, center, _);
     @include tablet {
@@ -114,13 +111,20 @@ p {
     &--icon {
       position: absolute;
       left: 3%;
+      top: 45%;
+    }
+    &--upload {
+      width: 100%;
+      margin-top: 1.3rem;
+      padding: 1rem 3rem;
+      font-size: 1rem;
+      @include button;
     }
   }
   &__container {
     width: 2.7rem;
     height: 2.7rem;
     border-radius: 25px;
-    //position: relative;
     &--img {
       @extend .brainflix-header__container;
       object-fit: cover;
