@@ -1,6 +1,8 @@
 import React from 'react';
 import avatarImg from "../../assets/images/mohan-muruge.jpg";
 import './Form.scss'
+import Comments from '../../components/Comments/Comments';
+
 
 const Form = (props) => {
     const commentCount = [props.selectedVideoComments.length]
@@ -18,6 +20,7 @@ const Form = (props) => {
                     <input className="comment-form__form--button" type ="submit" value="COMMENT" ></input>
                 </form>                         
             </div>
+             {/* <Comments/>  */}
         </div>
     );
 };

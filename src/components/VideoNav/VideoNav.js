@@ -8,7 +8,7 @@ const VideoNav = (props) => {
 
   return (
     
-    <>
+    <div className="desktop-layout">
        <p className ="video-heading">NEXT VIDEOS</p>
        {props.videos.map(video => {
         return (
@@ -23,7 +23,7 @@ const VideoNav = (props) => {
            />
         )
       })} 
-      </>
+      </div>
   );
 }
 

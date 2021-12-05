@@ -11,6 +11,9 @@
       background-color: black;
       @include flex(center, _, _);
     }
+    @include desktop {
+      height: 30rem;
+    }
     &--current-video {
       @extend .video-main__video-container;
       object-fit: cover;
@@ -18,6 +21,9 @@
       @include tablet {
         width: 92vw;
         margin: 0;
+      }
+      @include desktop {
+        width: 70vw;
       }
     }
   }
