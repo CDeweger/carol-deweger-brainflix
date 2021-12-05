@@ -1,14 +1,8 @@
 @use "../../styles/_partials/colors" as *;
 @use "../../styles/_partials/mixins" as *;
 
-.video-container {
-  width: 100vw;
-  height: auto;
-  background: black;
-  @include flex(center, _, _);
-
-  &__video {
-    width: 100vw;
-    height: auto;
-  }
+.video-heading {
+  color: $primary-color3;
+  @include font-demi;
+  margin: 1.5rem 1rem;
 }

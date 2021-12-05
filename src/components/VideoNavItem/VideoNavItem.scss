@@ -1,0 +1,31 @@
+@use "../../styles/_partials/colors" as *;
+@use "../../styles/_partials/fonts" as *;
+@use "../../styles/_partials/mixins" as *;
+
+.video-nav {
+  @include flex(_, _, _);
+  margin: 1rem;
+
+  &__container {
+    width: 30vw;
+    height: 5rem;
+    border-radius: 5px;
+    &--video {
+      @extend .video-nav__container;
+      object-fit: cover;
+    }
+  }
+  &__description-container {
+    @include flex(space-between, _, column);
+    margin-left: 1rem;
+    &--title {
+      @include font-demi;
+      color: $primary-color1;
+      padding: 0.2rem 0;
+      line-height: 1.5rem;
+    }
+    &--channel {
+      color: $primary-color1;
+    }
+  }
+}

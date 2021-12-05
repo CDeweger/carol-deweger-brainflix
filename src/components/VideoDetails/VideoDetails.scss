@@ -32,6 +32,7 @@
     margin: 0.5rem 8rem 0 0;
     &--channel {
       @include font-demi;
+      font-size: 1.2rem;
       margin-bottom: 1.5rem;
       color: $primary-color1;
     }
