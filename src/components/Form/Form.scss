@@ -7,13 +7,22 @@
     @include font-demi;
     color: $primary-color1;
     margin-left: 1rem;
+    @include tablet {
+      margin-left: 1.6rem;
+      margin-bottom: 1rem;
+    }
   }
   &__body {
     @include flex(center, _, _);
     padding-top: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: $secondary-color3 2px solid;
-    margin: 1rem 1rem 0 1rem;
+    margin: 0 1rem 0 1rem;
+    @include tablet {
+      @include flex(space-between, center, _);
+      margin: 0 1.6rem;
+      padding-bottom: 1.2rem;
+    }
   }
   &__img-container {
     width: 3rem;
@@ -24,14 +33,29 @@
       @extend .comment-form__img-container;
       object-fit: cover;
       object-position: 20% 50%;
+      @include tablet {
+        margin: 0;
+      }
     }
   }
   &__form {
     margin-left: 1rem;
+    @include tablet {
+      @include flex(_, _, _);
+      @include tablet {
+        margin: 0;
+        position: relative;
+      }
+    }
 
     &--label {
       color: $primary-color3;
       @include font-demi;
+      @include tablet {
+        position: absolute;
+        top: -40%;
+        font-size: 0.85rem;
+      }
     }
     &--comment-box {
       width: 75vw;
@@ -40,6 +64,12 @@
       border: $secondary-color3 1px solid;
       background-color: $secondary-color4;
       padding-bottom: 5rem;
+      @include tablet {
+        width: 58vw;
+        height: 3rem;
+        padding: 0;
+        margin-right: 1.5rem;
+      }
     }
     ::placeholder {
       font-size: 1rem;
@@ -53,6 +83,11 @@
       border: none;
       padding: 1rem 0 0.8rem 0;
       font-size: 1rem;
+      @include tablet {
+        width: 23vw;
+        margin: 0;
+        height: 3rem;
+      }
     }
   }
 }
