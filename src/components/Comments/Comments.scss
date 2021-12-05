@@ -6,6 +6,10 @@
   border-bottom: $secondary-color3 2px solid;
   @include flex(_, _, _);
   margin: 0 1rem;
+  @include tablet {
+    margin: 0.6rem 1.6rem 1rem 1.6rem;
+    @include flex(space-between, _, _);
+  }
 
   &__img {
     border-radius: 40px;
@@ -13,17 +17,34 @@
     height: 3rem;
     background-color: $secondary-color3;
     margin: 1rem 1rem 1rem 0;
+    @include tablet {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-top: 0.5rem;
+    }
   }
   &__content-box {
     width: 75vw;
     margin: 1rem 1rem 1rem 0;
+    @include tablet {
+      width: 85vw;
+      margin: 0.5rem 1rem 1rem 0;
+    }
     &--name {
       @include font-demi;
       color: $primary-color1;
       margin-bottom: 0.9rem;
+      @include tablet {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
     }
     &--time {
       color: $primary-color3;
+      @include tablet {
+        font-size: 0.9rem;
+        margin-right: -1rem;
+      }
     }
   }
   &__content-box-name-time {
@@ -32,5 +53,8 @@
 
   &__comment {
     line-height: 1.4rem;
+    @include tablet {
+      font-size: 0.9rem;
+    }
   }
 }
