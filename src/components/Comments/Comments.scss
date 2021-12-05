@@ -1,0 +1,36 @@
+@use "../../styles/_partials/colors" as *;
+@use "../../styles/_partials/fonts" as *;
+@use "../../styles/_partials/mixins" as *;
+
+.comment-box {
+  border-bottom: $secondary-color3 2px solid;
+  @include flex(_, _, _);
+  margin: 0 1rem;
+
+  &__img {
+    border-radius: 40px;
+    width: 3rem;
+    height: 3rem;
+    background-color: $secondary-color3;
+    margin: 1rem 1rem 1rem 0;
+  }
+  &__content-box {
+    width: 75vw;
+    margin: 1rem 1rem 1rem 0;
+    &--name {
+      @include font-demi;
+      color: $primary-color1;
+      margin-bottom: 0.9rem;
+    }
+    &--time {
+      color: $primary-color3;
+    }
+  }
+  &__content-box-name-time {
+    @include flex(space-between, _, _);
+  }
+
+  &__comment {
+    line-height: 1.4rem;
+  }
+}

@@ -41,5 +41,6 @@
 @mixin button {
   background-color: $primary-color2;
   color: $primary-color4;
+  border-radius: 5px;
   @include font-regular();
 }
