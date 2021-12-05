@@ -10,6 +10,11 @@
     width: 30vw;
     height: 5rem;
     border-radius: 5px;
+    @include tablet {
+      margin-left: 0.3rem;
+      width: 7rem;
+      height: 4rem;
+    }
     &--video {
       @extend .video-nav__container;
       object-fit: cover;
@@ -18,14 +23,24 @@
   &__description-container {
     @include flex(space-between, _, column);
     margin-left: 1rem;
+    @include tablet {
+      width: 11rem;
+    }
     &--title {
       @include font-demi;
       color: $primary-color1;
       padding: 0.2rem 0;
       line-height: 1.5rem;
+      @include tablet {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+      }
     }
     &--channel {
       color: $primary-color1;
+      @include tablet {
+        font-size: 0.9rem;
+      }
     }
   }
 }

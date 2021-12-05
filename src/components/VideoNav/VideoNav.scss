@@ -5,4 +5,9 @@
   color: $primary-color3;
   @include font-demi;
   margin: 1.5rem 1rem;
+
+  @include tablet {
+    margin-left: 1.6rem;
+    font-size: 0.9rem;
+  }
 }
