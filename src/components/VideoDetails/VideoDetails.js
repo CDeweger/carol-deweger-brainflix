@@ -5,6 +5,7 @@ import viewsImg from "../../assets/icons/views.svg"
 
 const VideoDetails = (props) => {
 
+    // re-format timestamp to human readable date format 
     const timestampString = (props.selectedVideo.timestamp);
     const dateObject = new Date(timestampString);
     const humanReadableDateFormat = dateObject.toLocaleString("en-US", { month: "2-digit" , day: "2-digit", year: "numeric"});

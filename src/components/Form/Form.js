@@ -5,6 +5,7 @@ import './Form.scss'
 
 
 const Form = (props) => {
+
     const commentCount = [props.selectedVideoComments.length]
 
     return (
