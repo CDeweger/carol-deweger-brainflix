@@ -7,6 +7,7 @@
     @include font-demi;
     color: $primary-color1;
     margin-left: 1rem;
+    margin-top: 0.5rem;
     @include tablet {
       margin-left: 1.6rem;
       margin-bottom: 1rem;
@@ -17,7 +18,7 @@
   }
   &__body {
     @include flex(center, _, _);
-    padding-top: 1.5rem;
+    padding-top: 2.2rem;
     padding-bottom: 1rem;
     border-bottom: $secondary-color3 2px solid;
     margin: 0 1rem 0 1rem;
@@ -52,12 +53,11 @@
   }
   &__form {
     margin-left: 1rem;
+    position: relative;
     @include tablet {
       @include flex(_, _, _);
-      @include tablet {
-        margin: 0;
-        position: relative;
-      }
+      margin: 0;
+      position: relative;
       @include desktop {
         margin-right: 1.5rem;
       }
@@ -66,6 +66,8 @@
     &--label {
       color: $primary-color3;
       @include font-demi;
+      position: relative;
+      top: -3%;
       @include tablet {
         position: absolute;
         top: -40%;
@@ -94,6 +96,7 @@
       color: $primary-color1;
       padding-left: 1rem;
     }
+
     &--button {
       margin-top: 1rem;
       width: 75vw;
@@ -101,13 +104,28 @@
       border: none;
       padding: 1rem 0 0.8rem 0;
       font-size: 1rem;
+      position: relative;
       @include tablet {
         width: 23vw;
         margin: 0;
         height: 3rem;
+        font-size: 0.8rem;
       }
       @include desktop {
         width: 13vw;
+      }
+    }
+    &--img {
+      position: absolute;
+      top: 83%;
+      left: 5%;
+      @include tablet {
+        top: 30%;
+        left: 75%;
+        width: 1.2rem;
+      }
+      @include desktop {
+        left: 76%;
       }
     }
   }

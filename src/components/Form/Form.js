@@ -1,5 +1,6 @@
 import React from 'react';
 import avatarImg from "../../assets/images/mohan-muruge.jpg";
+import commentImg from "../../assets/icons/add_comment.svg";
 import './Form.scss'
 
 
@@ -17,6 +18,7 @@ const Form = (props) => {
                     <label className="comment-form__form--label" htmlFor ="comment-box">JOIN THE CONVERSATION</label><br></br>
                     <input className="comment-form__form--comment-box" type ="text" name="comment-box" placeholder="Add a new comment"></input>
                     <input className="comment-form__form--button" type ="submit" value="COMMENT" ></input>
+                    <img className="comment-form__form--img" src={commentImg}></img>
                 </form>                         
             </div>
         </div>
