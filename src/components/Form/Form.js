@@ -19,7 +19,7 @@ const Form = (props) => {
                     <label className="comment-form__form--label" htmlFor ="comment-box">JOIN THE CONVERSATION</label><br></br>
                     <input className="comment-form__form--comment-box" type ="text" name="comment-box" placeholder="Add a new comment"></input>
                     <input className="comment-form__form--button" type ="submit" value="COMMENT" ></input>
-                    <img className="comment-form__form--img" src={commentImg}></img>
+                    <img className="comment-form__form--img" alt="comment" src={commentImg}></img>
                 </form>                         
             </div>
         </div>
