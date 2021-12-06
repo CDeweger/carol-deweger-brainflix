@@ -10,4 +10,10 @@
     margin-left: 1.6rem;
     font-size: 0.9rem;
   }
+
+  @include desktop {
+    font-size: 0.75rem;
+    margin-top: 2.2rem;
+    margin-bottom: 1rem;
+  }
 }

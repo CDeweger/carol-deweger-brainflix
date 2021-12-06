@@ -10,14 +10,8 @@ const VideoDetails = (props) => {
     const humanReadableDateFormat = dateObject.toLocaleString("en-US", { month: "2-digit" , day: "2-digit", year: "numeric"});
     
     return (
-        // <div className="video-main">
-        <>
-            <div className="video-main__video-container">
-                <video className="video-main__video-container--current-video"  poster = {props.selectedVideo.image} controls> </video>
-            </div>
-
-            <div className="desktop-layout">
-
+        <div className="video-main">
+        
               <h1 className="video-main__heading">{props.selectedVideo.title}</h1>
               <div className="video-main__info-container">
                 <div className="video-main__channel-timestamp-container">
@@ -32,9 +26,8 @@ const VideoDetails = (props) => {
                 </div>
               </div>
               <p className="video-main__description">{props.selectedVideo.description}</p>
-            </div>
-        </>
-        // </div>
+        
+         </div>
     );
 };
 

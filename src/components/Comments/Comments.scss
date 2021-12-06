@@ -10,6 +10,13 @@
     margin: 0.6rem 1.6rem 1rem 1.6rem;
     @include flex(space-between, _, _);
   }
+  @include desktop {
+    margin-right: 0;
+    padding-top: 1rem;
+    border-bottom: none;
+    border-top: $secondary-color3 2px solid;
+    @include flex(space-between, _, _);
+  }
 
   &__img {
     border-radius: 40px;
@@ -22,6 +29,11 @@
       height: 2.5rem;
       margin-top: 0.5rem;
     }
+    @include desktop {
+      //margin-right: 3.5rem;
+      width: 3rem;
+      height: 3rem;
+    }
   }
   &__content-box {
     width: 75vw;
@@ -29,6 +41,9 @@
     @include tablet {
       width: 85vw;
       margin: 0.5rem 1rem 1rem 0;
+    }
+    @include desktop {
+      width: 50.5vw;
     }
     &--name {
       @include font-demi;
@@ -44,6 +59,9 @@
       @include tablet {
         font-size: 0.9rem;
         margin-right: -1rem;
+      }
+      @include desktop {
+        margin-right: 1rem;
       }
     }
   }

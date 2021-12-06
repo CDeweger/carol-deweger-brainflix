@@ -154,9 +154,3 @@ p {
     }
   }
 }
-
-.desktop-layout {
-  @include desktop {
-    @include flex(_, _, column);
-  }
-}

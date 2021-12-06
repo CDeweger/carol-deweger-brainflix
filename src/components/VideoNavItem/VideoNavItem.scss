@@ -6,6 +6,10 @@
   @include flex(_, _, _);
   margin: 1rem;
 
+  @include desktop {
+    margin-bottom: 1.3rem;
+  }
+
   &__container {
     width: 30vw;
     height: 5rem;
@@ -15,9 +19,13 @@
       width: 7rem;
       height: 4rem;
     }
+    @include desktop {
+      height: 4.5rem;
+    }
     &--video {
       @extend .video-nav__container;
       object-fit: cover;
+      margin-left: 0;
     }
   }
   &__description-container {
