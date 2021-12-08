@@ -20,8 +20,8 @@ function Header() {
                 <img className ="brainflix-header__container--img" src={avatarImg} alt="mohan-muruge"/>
             </div>        
             <div className ="brainflix-header__button">
-                <img className ="brainflix-header__button--icon" src={uploadIcon} alt="upload"/>
-                <input className ="brainflix-header__button--upload" type="submit" value="UPLOAD"></input>
+            <img className ="brainflix-header__button--icon" src={uploadIcon} alt="upload"/>
+                <button className ="brainflix-header__button--upload" type="button" ><Link to={`/video-upload`} style={{ textDecoration: 'none',color:'white' }}>UPLOAD</Link></button>
             </div> 
         </header>
       

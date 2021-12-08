@@ -15,6 +15,7 @@ import {
 import HomePage from './pages/HomePage/HomePage';
 import './styles/_partials/_global.scss';
 import './App.scss';
+import VideoUploadPage from './pages/VideoUploadPage/VideoUploadPage';
 
 class App extends React.Component {
 
@@ -39,10 +40,18 @@ class App extends React.Component {
     return (
       <>
       <BrowserRouter>
-        <Switch>
+        <Switch> 
+
           <Route path="/" exact>
             <HomePage />
           </Route>
+
+          <Route path="/video-upload" >
+            <VideoUploadPage/>
+          </Route>
+
+
+
         </Switch>
       </BrowserRouter>
         {/* <MainVideo selectedVideo={this.state.selectedVideo}/> 
