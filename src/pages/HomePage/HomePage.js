@@ -15,14 +15,15 @@ const API_KEY = "2d32074c-9698-4bb6-b56c-25da44886f82";
 class HomePage extends Component {
 
   state = {
-    videos:[]
+    videos:[],
+    selectedVideo:null
   }
 
   componentDidMount(){
     axios
     .get(API_URL + "/videos/" + "?api_key=" + API_KEY)
     .then( response => {
-
+      console.log(response);
       this.setState({
         videos:response.data
       });
@@ -34,12 +35,20 @@ class HomePage extends Component {
   }
 
   fetchVideo = (videoId) => {
-    console.log(videoId);
+    // console.log(videoId);
 
+    
     axios
      .get(API_URL + "/videos/" + videoId +"?api_key=" + API_KEY)
      .then ((response => {
        console.log(response);
+
+       const currentVideo = this.state.videos.find(video => video.id === videoId);
+       console.log(currentVideo);
+
+       this.setState ({
+        selectedVideo : currentVideo
+       })
 
      }))
 
@@ -65,6 +74,7 @@ class HomePage extends Component {
         return (
             <>
                 <Header/>
+                <MainVideo selectedVideo={this.state.selectedVideo}/>
                 <VideoNav videos={this.state.videos}/> 
                  {/* <MainVideo selectedVideo={this.state.selectedVideo}/> 
                 <div className ="desktop-layout">
