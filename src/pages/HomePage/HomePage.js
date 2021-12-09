@@ -20,6 +20,10 @@ class HomePage extends Component {
   }
 
   componentDidMount(){
+
+    const currVideo = this.props.match.params.videoId;
+    //console.log(this.props);
+
     axios
     .get(API_URL + "/videos/" + "?api_key=" + API_KEY)
     .then( response => {
@@ -27,11 +31,18 @@ class HomePage extends Component {
       this.setState({
         videos:response.data
       });
-      const videoToFetch = response.data[0].id;
+      const videoToFetch = currVideo ? currVideo : response.data[0].id;
       this.fetchVideo(videoToFetch);
 
     })
     .catch(err => console.log(err));
+  }
+
+  componentDidUpdate(prevProps) {
+    const currVideo = this.props.match.params.videoId;
+    if (prevProps.match.params.videoId !== currVideo ){
+      this.fetchVideo(currVideo);
+    }
   }
 
   fetchVideo = (videoId) => {
@@ -41,9 +52,10 @@ class HomePage extends Component {
     axios
      .get(API_URL + "/videos/" + videoId +"?api_key=" + API_KEY)
      .then ((response => {
-       console.log(response);
+       console.log(response.data.id);
 
-       const currentVideo = this.state.videos.find(video => video.id === videoId);
+      //  const currentVideo = this.state.videos.find(video => video.id === videoId);
+      const currentVideo = response.data;
        console.log(currentVideo);
 
        this.setState ({
@@ -75,7 +87,18 @@ class HomePage extends Component {
             <>
                 <Header/>
                 <MainVideo selectedVideo={this.state.selectedVideo}/>
-                <VideoNav videos={this.state.videos}/> 
+                <div className ="desktop-layout">
+                  <div className ="desktop-layout__video-content">
+                    <VideoDetails selectedVideo={this.state.selectedVideo}/>
+                    <Form selectedVideo={this.state.selectedVideo} />
+                    <Comments selectedVideo={this.state.selectedVideo} />
+                  </div>
+                  <div className ="desktop-layout__video-nav">
+                    <VideoNav videos={this.state.videos}/> 
+                  </div>
+                </div>
+
+
                  {/* <MainVideo selectedVideo={this.state.selectedVideo}/> 
                 <div className ="desktop-layout">
                   <div className ="desktop-layout__video-content">

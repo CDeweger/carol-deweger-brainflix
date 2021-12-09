@@ -5,24 +5,29 @@ import './Form.scss'
 
 
 const Form = (props) => {
+    if (!props.selectedVideo) {
+        return <p></p>
+    }
 
-    const commentCount = [props.selectedVideoComments.length]
+    const commentCount = [props.selectedVideo.comments.length]
 
     return (
-        <div className="comment-form">
-            <p className ="comment-form__heading">{commentCount} Comments</p>
-            <div className="comment-form__body">
-                <div className="comment-form__img-container">
-                    <img className="comment-form__img-container--img" src={avatarImg} alt="mohan-muruge"></img>                
-                </div>
-                <form className="comment-form__form">
-                    <label className="comment-form__form--label" htmlFor ="comment-box">JOIN THE CONVERSATION</label><br></br>
-                    <input className="comment-form__form--comment-box" type ="text" name="comment-box" placeholder="Add a new comment"></input>
-                    <input className="comment-form__form--button" type ="submit" value="COMMENT" ></input>
-                    <img className="comment-form__form--img" alt="comment" src={commentImg}></img>
-                </form>                         
-            </div>
-        </div>
+        <>
+          <div className="comment-form">
+             <p className ="comment-form__heading">{commentCount} Comments</p>
+             <div className="comment-form__body">
+                 <div className="comment-form__img-container">
+                     <img className="comment-form__img-container--img" src={avatarImg} alt="mohan-muruge"></img>                
+                 </div>
+                 <form className="comment-form__form">
+                     <label className="comment-form__form--label" htmlFor ="comment-box">JOIN THE CONVERSATION</label><br></br>
+                     <input className="comment-form__form--comment-box" type ="text" name="comment-box" placeholder="Add a new comment"></input>
+                     <input className="comment-form__form--button" type ="submit" value="COMMENT" ></input>
+                     <img className="comment-form__form--img" alt="comment" src={commentImg}></img>
+                 </form>                         
+             </div>
+         </div> 
+        </>
     );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './VideoNav.scss'
+import './VideoNav.scss';
 import VideoNavItem from'../../components/VideoNavItem/VideoNavItem'
 
 
