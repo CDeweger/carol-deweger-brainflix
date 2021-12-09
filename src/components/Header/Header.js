@@ -4,6 +4,7 @@ import avatarImg from "../../assets/images/mohan-muruge.jpg";
 import uploadIcon from "../../assets/icons/upload.svg";
 import searchIcon from "../../assets/icons/search.svg";
 import '../../styles/_partials/_global.scss';
+import './Header.scss'
 
 
 function Header() {
