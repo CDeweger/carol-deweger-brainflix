@@ -5,10 +5,10 @@ import VideoNavItem from'../../components/VideoNavItem/VideoNavItem'
 
 const VideoNav = (props) => {
 
-
   return (
     <>
        <p className ="video-heading">NEXT VIDEOS</p>
+     
        {props.videos.map(video => {
         return (
            
@@ -17,11 +17,11 @@ const VideoNav = (props) => {
            title={video.title}
            channel={video.channel}
            image={video.image}
-           onVideoSelect={props.onVideoSelect}
+          //  onVideoSelect={props.onVideoSelect}
            videoId={video.id}
            />
         )
-      })} 
+      })}  
       </>
   );
 }
