@@ -1,19 +1,19 @@
-@use "./styles/_partials/mixins" as *;
+// @use "./styles/_partials/mixins" as *;
 
-.desktop-layout {
-  @include desktop {
-    @include flex(center, _, _);
-  }
+// .desktop-layout {
+//   @include desktop {
+//     @include flex(center, _, _);
+//   }
 
-  &__video-content {
-    @include desktop {
-      width: 60vw;
-    }
-  }
+//   &__video-content {
+//     @include desktop {
+//       width: 60vw;
+//     }
+//   }
 
-  &__video-nav {
-    @include desktop {
-      border-left: solid 2px #e1e1e1;
-    }
-  }
-}
+//   &__video-nav {
+//     @include desktop {
+//       border-left: solid 2px #e1e1e1;
+//     }
+//   }
+// }

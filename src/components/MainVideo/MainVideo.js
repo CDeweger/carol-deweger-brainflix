@@ -3,7 +3,7 @@ import './MainVideo.scss'
 
 
 const MainVideo = (props) => {
-    console.log(props);
+    //console.log(props);
 
     if (!props.selectedVideo) {
         return <p>...Loading Video</p>

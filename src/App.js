@@ -5,8 +5,6 @@ import {
   Route
 } from "react-router-dom";
 import HomePage from './pages/HomePage/HomePage';
-import './styles/_partials/_global.scss';
-import './App.scss';
 import VideoUploadPage from './pages/VideoUploadPage/VideoUploadPage';
 
 function App () {

@@ -43,5 +43,5 @@
   color: $primary-color4;
   border-radius: 5px;
   border: none;
-  @include font-regular();
+  @include font-regular;
 }
