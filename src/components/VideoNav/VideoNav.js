@@ -17,7 +17,6 @@ const VideoNav = (props) => {
            title={video.title}
            channel={video.channel}
            image={video.image}
-          //  onVideoSelect={props.onVideoSelect}
            videoId={video.id}
            />
         )

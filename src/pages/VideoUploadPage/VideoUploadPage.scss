@@ -8,6 +8,9 @@
   @include tablet {
     padding: 0 2rem;
   }
+  @include desktop {
+    padding: 0 6.5rem;
+  }
   &__heading {
     font-size: 1.8rem;
     @include font-demi;
@@ -19,6 +22,10 @@
       padding-bottom: 1.6rem;
       @include font-bold;
       font-size: 2.2rem;
+    }
+    @include desktop {
+      // margin-left: 4.8rem;
+      // margin-right: 4.8rem;
     }
   }
   &__title {
@@ -37,11 +44,20 @@
     @include tablet {
       width: 50vw;
     }
+    @include desktop {
+      width: 25vw;
+    }
 
     &--img {
       @extend .upload__image-container;
       object-fit: cover;
     }
+  }
+  &__form {
+    margin-top: 2.2rem;
+  }
+  &__form-title {
+    margin-left: 1.5rem;
   }
   &__input-title {
     width: 92vw;
@@ -50,7 +66,13 @@
     border-radius: 5px;
     background-color: $secondary-color4;
     margin: 0.3rem 0 1.5rem 0;
+    @include desktop {
+      width: 57vw;
+      margin-left: 1.5rem;
+      height: 2.5rem;
+    }
   }
+
   &__input-des {
     width: 92vw;
     height: 6rem;
@@ -60,6 +82,11 @@
     padding-bottom: 3rem;
     margin-top: 0.3rem;
     margin-bottom: 1.8rem;
+    @include desktop {
+      width: 57vw;
+      margin-left: 1.5rem;
+      height: 5rem;
+    }
   }
   ::placeholder {
     font-size: 1rem;
@@ -78,6 +105,9 @@
       width: 22vw;
       padding: 1rem 2rem;
       font-size: 0.8rem;
+    }
+    @include desktop {
+      width: 12vw;
     }
   }
   &__link {
@@ -109,6 +139,14 @@
     @include tablet {
       @include flex(_, center, row-reverse);
       border-top: 2px $secondary-color3 solid;
+    }
+    @include desktop {
+      border-top: 2px $secondary-color3 solid;
+    }
+  }
+  &__desktop-layout {
+    @include desktop {
+      @include flex(_, _, _);
     }
   }
 }

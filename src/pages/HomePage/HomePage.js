@@ -24,9 +24,9 @@ class HomePage extends Component {
     const currVideo = this.props.match.params.videoId;
 
     axios
-    .get(API_URL + "/videos/" + "?api_key=" + API_KEY)
+    .get(`https://project-2-api.herokuapp.com/videos?api_key=${API_KEY}`  )
+    // .get(API_URL + "/videos/" + "?api_key=" + API_KEY)
     .then( response => {
-      //console.log(response);
       this.setState({
         videos:response.data
       });
@@ -52,10 +52,8 @@ class HomePage extends Component {
     axios
      .get(API_URL + "/videos/" + videoId +"?api_key=" + API_KEY)
      .then ((response => {
-      //  console.log(response.data.id);
 
       const currentVideo = response.data;
-       //console.log(currentVideo);
 
        this.setState ({
         selectedVideo : currentVideo
@@ -66,24 +64,30 @@ class HomePage extends Component {
   }
     
     render() {
+      if (!this.state.selectedVideo) {
+        return null
+    }
+      const filteredVideo = this.state.videos.filter(video => video.id !== this.state.selectedVideo.id);
 
-        return (
-            <>
-                <Header/>
-                <MainVideo selectedVideo={this.state.selectedVideo}/>
-                <div className ="desktop-layout">
-                  <div className ="desktop-layout__video-content">
-                    <VideoDetails selectedVideo={this.state.selectedVideo}/>
-                    <Form selectedVideo={this.state.selectedVideo} />
-                    <Comments selectedVideo={this.state.selectedVideo} />
-                  </div>
-                  <div className ="desktop-layout__video-nav">
-                    <VideoNav videos={this.state.videos}/> 
-                  </div>
-                </div>
-            </>     
-            
-        );
+      return (
+      
+        <>
+          <Header/>
+          <MainVideo selectedVideo={this.state.selectedVideo}/>
+          <div className ="desktop-layout">
+            <div className ="desktop-layout__video-content">
+              <VideoDetails selectedVideo={this.state.selectedVideo}/>
+              <Form selectedVideo={this.state.selectedVideo} />
+              <Comments selectedVideo={this.state.selectedVideo} />
+            </div>
+            <div className ="desktop-layout__video-nav">
+              {/* <VideoNav videos={this.state.videos}/>  */}
+              <VideoNav videos={filteredVideo}/> 
+
+            </div>
+          </div>
+        </>     
+      );
     }
 }
 
