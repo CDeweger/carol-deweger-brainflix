@@ -99,18 +99,24 @@
       }
     }
     &--upload {
-      width: 100%;
+      width: 92vw;
       margin-top: 1.3rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
       padding: 1rem 3rem;
       font-size: 1rem;
+      text-align: center;
       @include button;
 
       @include tablet {
-        width: 100%;
+        width: 20vw;
         margin-top: 0;
-        margin-left: -3rem;
+        margin-left: -0.5rem;
         padding: 0.9rem 2rem;
         font-size: 0.7rem;
+      }
+      @include desktop {
+        width: 12vw;
       }
     }
   }

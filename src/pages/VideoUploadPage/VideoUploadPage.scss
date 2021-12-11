@@ -108,6 +108,7 @@
     }
     @include desktop {
       width: 12vw;
+      margin-top: 1.5rem;
     }
   }
   &__link {
@@ -124,16 +125,13 @@
   }
 
   &__cancel {
-    margin-top: 2.8rem;
-    @include font-demi;
+    border: none;
+    background-color: white;
+    position: relative;
     color: $primary-color2;
-    text-align: center;
-    padding-bottom: 2rem;
-    @include tablet {
-      font-size: 0.8rem;
-      margin-right: 5rem;
-      padding-bottom: 2.5rem;
-    }
+    @include font-demi;
+    top: 25%;
+    left: 60%;
   }
   &__tablet-layout {
     @include tablet {

@@ -22,7 +22,9 @@ function Header() {
             </div>        
             <div className ="brainflix-header__button">
                 <img className ="brainflix-header__button--icon" src={uploadIcon} alt="upload"/>
-                <button className ="brainflix-header__button--upload" type="button" ><Link to={`/video-upload`} style={{ textDecoration: 'none', color:'white' }}>UPLOAD</Link></button>
+                <Link to={`/video-upload`} style={{ textDecoration: 'none', color:'white' }}>
+                    <p className ="brainflix-header__button--upload">UPLOAD</p>
+                </Link>
             </div> 
         </header>
       

@@ -72,7 +72,7 @@ class HomePage extends Component {
       return (
       
         <>
-          <Header/>
+          {/* <Header/> */}
           <MainVideo selectedVideo={this.state.selectedVideo}/>
           <div className ="desktop-layout">
             <div className ="desktop-layout__video-content">
