@@ -5,7 +5,6 @@ import publishImg from '../../assets/icons/publish.svg'
 import './VideoUploadPage.scss'
 
 
-
 const VideoUploadPage = () => {
     return (
         <>
@@ -24,15 +23,15 @@ const VideoUploadPage = () => {
               {/* reset form when cancel button is clicked */}
               <input className="upload__cancel" type="reset" value="CANCEL"></input>
             </form>
-                  </div>
-                  <div className='upload__tablet-layout'>
-                    {/* console.log the message when publish button is clicked */}
-                    <Link className="upload__link"onClick= {()=> console.log("Video Published!")}  to={`/`}>
-                      <p className="upload__button">PUBLISH
-                      <img className="upload__icon" src={publishImg} alt="upload-icon"></img>
-                      </p>
-                    </Link>
-                  </div>
+          </div>
+            <div className='upload__tablet-layout'>
+              {/* console.log the message when publish button is clicked */}
+              <Link className="upload__link"onClick= {()=> console.log("Video Published!")}  to={`/`}>
+                <p className="upload__button">PUBLISH
+                <img className="upload__icon" src={publishImg} alt="upload-icon"></img>
+                </p>
+              </Link>
+            </div>
         </div>
         </>
     );

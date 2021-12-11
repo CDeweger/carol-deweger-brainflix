@@ -22,9 +22,9 @@ class HomePage extends Component {
 
     const currVideo = this.props.match.params.videoId;
 
+    // initial API call
     axios
     .get(`https://project-2-api.herokuapp.com/videos?api_key=${API_KEY}`  )
-    // .get(API_URL + "/videos/" + "?api_key=" + API_KEY)
     .then( response => {
       this.setState({
         videos:response.data
@@ -43,11 +43,13 @@ class HomePage extends Component {
   }
 
   fetchVideo = (videoId) => {
-
+     
+    // show first video when logo is clicked
      if(!videoId){
        videoId = this.state.videos[0].id
      }
 
+    //get the selected video when it is clicked on video nav   
     axios
      .get(API_URL + "/videos/" + videoId +"?api_key=" + API_KEY)
      .then ((response => {
@@ -63,15 +65,17 @@ class HomePage extends Component {
   }
     
     render() {
+
+      //when no selected video return null
       if (!this.state.selectedVideo) {
         return null
     }
+
+      // remove selected video from the video nav
       const filteredVideo = this.state.videos.filter(video => video.id !== this.state.selectedVideo.id);
 
       return (
-      
         <>
-          {/* <Header/> */}
           <MainVideo selectedVideo={this.state.selectedVideo}/>
           <div className ="desktop-layout">
             <div className ="desktop-layout__video-content">
@@ -80,9 +84,7 @@ class HomePage extends Component {
               <Comments selectedVideo={this.state.selectedVideo} />
             </div>
             <div className ="desktop-layout__video-nav">
-              {/* <VideoNav videos={this.state.videos}/>  */}
               <VideoNav videos={filteredVideo}/> 
-
             </div>
           </div>
         </>     
