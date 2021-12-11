@@ -5,7 +5,6 @@ import VideoDetails from '../../components/VideoDetails/VideoDetails';
 import Form from '../../components/Form/Form';
 import Comments from '../../components/Comments/Comments';
 import VideoNav from '../../components/VideoNav/VideoNav';
-import Header from '../../components/Header/Header';
 import './HomePage.scss'
 
 //save API URL and API KEY to variable
