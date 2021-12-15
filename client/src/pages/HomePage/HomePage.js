@@ -22,6 +22,7 @@ class HomePage extends Component {
 
     const currVideo = this.props.match.params.videoId;
 
+  
     // initial API call
     axios
     .get(`https://project-2-api.herokuapp.com/videos?api_key=${API_KEY}`  )
