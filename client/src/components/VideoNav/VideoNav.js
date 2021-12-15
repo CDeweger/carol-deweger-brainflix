@@ -1,6 +1,6 @@
 import React from 'react';
 import './VideoNav.scss';
-import VideoNavItem from'../../components/VideoNavItem/VideoNavItem'
+import VideoNavItem from'../VideoNavItem/VideoNavItem'
 
 
 const VideoNav = (props) => {
