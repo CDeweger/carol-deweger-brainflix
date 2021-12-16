@@ -65,7 +65,9 @@ router.post('/videos', (req, res) => {
             image: req.body.image
         });
         videosData.videoDetails.push(req.body);
+        writeFile(videosData);
         return res.status(201).send(videosData.videoList);
+
     } else {
         return res.status(400).send('No request body');
     }
