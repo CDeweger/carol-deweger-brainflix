@@ -8,10 +8,10 @@ import VideoNav from '../../components/VideoNav/VideoNav';
 import './HomePage.scss'
 
 //save API URL and API KEY to variable
-const API_URL = "https://project-2-api.herokuapp.com";
-const API_KEY = "2d32074c-9698-4bb6-b56c-25da44886f82";
+//const API_URL = "https://project-2-api.herokuapp.com";
+//const API_KEY = "2d32074c-9698-4bb6-b56c-25da44886f82";
 
-//const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = process.env.REACT_APP_API_URL;
 
 
 class HomePage extends Component {
@@ -28,8 +28,9 @@ class HomePage extends Component {
   
     // initial API call
     axios
-    .get(`https://project-2-api.herokuapp.com/videos?api_key=${API_KEY}`  )
+    .get(`${API_URL}/videos`)
     .then( response => {
+      console.log(response);
       this.setState({
         videos:response.data
       });
@@ -55,7 +56,7 @@ class HomePage extends Component {
 
     //get the selected video when it is clicked on video nav   
     axios
-     .get(API_URL + "/videos/" + videoId +"?api_key=" + API_KEY)
+     .get(`${API_URL}/videos/${videoId}`)
      .then ((response => {
 
       const currentVideo = response.data;
