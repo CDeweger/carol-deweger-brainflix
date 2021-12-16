@@ -30,30 +30,6 @@ router.get('/videos/:id', (req, res) => {
 })
 
 
-
-// router.post('/videos', (req, res) => {
-//     if (
-//       !req.body.title ||
-//       !req.body.channel
-//     ) {
-//       return res.status(400).send('Please make sure to include title and description of the video');
-//     }
-  
-//     const newVideo = {
-//       id: uuid(),
-//       title: req.body.title,
-//       channel: req.body.channel,
-//       image: req.body.image
-//     };
-  
-//     const videosData = readFile();
-//     videosData.push(newVideo);
-//     writeFile(videosData);
-  
-//     return res.status(201).json(newVideo);
-//   });
-
-
 // POST /videos
 router.post('/videos', (req, res) => {
     const videosData = readFile();

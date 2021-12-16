@@ -11,6 +11,9 @@ import './HomePage.scss'
 const API_URL = "https://project-2-api.herokuapp.com";
 const API_KEY = "2d32074c-9698-4bb6-b56c-25da44886f82";
 
+//const API_URL = process.env.REACT_APP_API_URL;
+
+
 class HomePage extends Component {
 
   state = {
