@@ -30,7 +30,6 @@ class HomePage extends Component {
     axios
     .get(`${API_URL}/videos`)
     .then( response => {
-      console.log(response);
       this.setState({
         videos:response.data
       });
@@ -66,7 +65,7 @@ class HomePage extends Component {
        })
 
      }))
-
+     .catch(err => console.log(err));
   }
     
     render() {

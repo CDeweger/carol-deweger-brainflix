@@ -38,7 +38,7 @@ router.post('/videos', (req, res) => {
             id: uuid(),
             title: req.body.title,
             channel: req.body.channel,
-            image: req.body.image
+            image: "http://localhost:8080/images/upload-video-preview.jpg"
         });
         videosData.videoDetails.push(req.body);
         writeFile(videosData);

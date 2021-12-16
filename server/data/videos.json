@@ -55,19 +55,16 @@
       "image": "https://i.imgur.com/i6S8m7I.jpg"
     },
     {
-      "id": "e36aa8b1-22e3-4041-bdf6-3e84cdc8f022",
-      "title": "test test video",
-      "channel": "Red Cow"
+      "id": "8df5b2b7-da60-40b3-a0b2-3314db6ac4c0",
+      "title": "Video 1",
+      "channel": "User 1",
+      "image": "http://localhost:8080/images/upload-video-preview.jpg"
     },
     {
-      "id": "08839021-ae0d-4f25-93b9-e39769a15e3a",
-      "title": "test test videozzzzzzzzzzz",
-      "channel": "Red Cow"
-    },
-    {
-      "id": "f1ee2710-e3ce-4fc7-aede-a30b6cc8d0bb",
-      "title": "test entry",
-      "channel": "user1"
+      "id": "fc5325f8-0cb4-43cf-a1e4-92d863d99b25",
+      "title": "video title",
+      "channel": "Carol DeWeger",
+      "image": "http://localhost:8080/images/upload-video-preview.jpg"
     }
   ],
   "videoDetails": [
@@ -348,8 +345,34 @@
       "id": "76ca28c0-7dea-4553-887f-8e5129a80fc3"
     },
     {
-      "title": "test entry",
-      "channel": "user1"
+      "title": "Video 1",
+      "channel": "User 1"
+    },
+    {
+      "title": "video title",
+      "channel": "Carol DeWeger",
+      "image": "/public/images/upload-video-preview.jpg",
+      "description": "video content",
+      "views": 1000,
+      "likes": 2000,
+      "duration": "3:30",
+      "video": "https://project-2-api.herokuapp.com/stream",
+      "timestamp": 1632344461000,
+      "comments": [
+        {
+          "name": "Martin Evergreen",
+          "comment": "I’ve loved trains ever since I was a child. I dreamed about riding one around the world. This is the most fantastic thing I’ve seen yet, and I’m watching it ON a train!",
+          "likes": 3,
+          "timestamp": 1632512763000
+        },
+        {
+          "name": "Emily Harper",
+          "comment": "Let’s collaborate on a video for saving money on cheap train tickets! I’ll have my associates contact yours.",
+          "likes": 0,
+          "timestamp": 1632496261000
+        }
+      ],
+      "id": "43f9f396-4db7-45aa-b88f-ba05d68c5855"
     }
   ]
 }
