@@ -44,6 +44,11 @@ class HomePage extends Component {
     if (prevProps.match.params.videoId !== currVideo ){
       this.fetchVideo(currVideo);
     }
+    window.scrollTo({
+      top: 0,
+      left: 100,
+      behavior: 'smooth'
+    });
   }
 
   fetchVideo = (videoId) => {
