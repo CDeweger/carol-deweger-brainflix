@@ -39,7 +39,7 @@ class HomePage extends Component {
     .catch(err => console.log(err));
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps) { 
     const currVideo = this.props.match.params.videoId;
     if (prevProps.match.params.videoId !== currVideo ){
       this.fetchVideo(currVideo);
@@ -47,7 +47,7 @@ class HomePage extends Component {
   }
 
   fetchVideo = (videoId) => {
-     
+     //console.log(videoId);
     // show first video when logo is clicked
      if(!videoId){
        videoId = this.state.videos[0].id
@@ -59,7 +59,6 @@ class HomePage extends Component {
      .then ((response => {
 
       const currentVideo = response.data;
-
        this.setState ({
         selectedVideo : currentVideo
        })
@@ -77,7 +76,6 @@ class HomePage extends Component {
 
       // remove selected video from the video nav
       const filteredVideo = this.state.videos.filter(video => video.id !== this.state.selectedVideo.id);
-
       return (
         <>
           <MainVideo selectedVideo={this.state.selectedVideo}/>

@@ -24,27 +24,7 @@ const url = 'http://localhost:8080/videos';
      .post(url,
      {
          title: e.target.title.value,
-         channel: "Carol DeWeger",
-         image: process.env.PUBLIC_URL + '/public/images/upload-video-preview.jpg',
          description: e.target.description.value,
-         views: 1000,
-         likes: 2000,
-         duration: "3:30",
-         video: 'https://project-2-api.herokuapp.com/stream',
-         timestamp: 1632344461000,
-         comments: [{
-          "name": "Martin Evergreen",
-          "comment": "I’ve loved trains ever since I was a child. I dreamed about riding one around the world. This is the most fantastic thing I’ve seen yet, and I’m watching it ON a train!",
-          "likes": 3,
-          "timestamp": 1632512763000
-          },
-          {
-          "name": "Emily Harper",
-          "comment": "Let’s collaborate on a video for saving money on cheap train tickets! I’ll have my associates contact yours.",
-          "likes": 0,
-          "timestamp": 1632496261000
-          }],
-         id: id,
      })
      .catch(err => {
          console.error(err);
@@ -65,9 +45,9 @@ const url = 'http://localhost:8080/videos';
              </div>
              <form className='upload__form' onSubmit={(e) => {this.postNewVideo(e)}}>
                <label className="upload__title upload__form-title" htmlFor ="comment-box" >TITLE YOUR VIDEO</label><br></br>
-               <input className="upload__input-title" type ="text" name="title" placeholder="Add a title to your video"></input><br></br>
+               <input className="upload__input-title" type ="text" name="title" placeholder="Add a title to your video" required></input><br></br>
                <label className="upload__title upload__form-title" htmlFor ="comment-box" name="description">ADD A VIDEO DESCRIPTION</label><br></br>
-               <input className="upload__input-des" type ="text" name="description" placeholder="Add a description to your video"></input>
+               <input className="upload__input-des" type ="text" name="description" placeholder="Add a description to your video" required></input>
                <input className="upload__cancel" type="reset" value="CANCEL"></input>
                <button type="submit" className="upload__button">PUBLISH</button>
              </form>

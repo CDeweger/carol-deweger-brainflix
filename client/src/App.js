@@ -10,7 +10,6 @@ import VideoUploadPage from './pages/VideoUploadPage/VideoUploadPage';
 
 function App () {
     return (
-      <>
         <BrowserRouter>
         <Header/>
           <Switch> 
@@ -19,7 +18,6 @@ function App () {
             <Route path="/videos/:videoId" component={HomePage}/>
           </Switch>
         </BrowserRouter>
-      </>
     );
   }
 
