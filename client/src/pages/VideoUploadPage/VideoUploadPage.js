@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-//import { v4 as uuidv4 } from 'uuid';
+import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
-//import previewImg from '../../assets/images/Upload-video-preview.jpg'
 import publishImg from "../../assets/icons/publish.svg";
 import "./VideoUploadPage.scss";
 
@@ -10,16 +8,17 @@ const API_URL = process.env.REACT_APP_API_URL;
 const url = "http://localhost:8080/videos";
 
 class VideoUploadPage extends React.Component {
-  scroll = () => {
-    window.scrollTo({
-      bottom: 0,
-      behavior: "smooth",
-    });
-  };
+  // scroll = () => {
+  //   window.scrollTo({
+  //     bottom: 0,
+  //     behavior: "smooth",
+  //   });
+  // };
 
   state = {
     posted: false,
   };
+
   postNewVideo = (e) => {
     console.log(e);
     e.preventDefault();
@@ -35,9 +34,16 @@ class VideoUploadPage extends React.Component {
       });
     e.target.reset();
   };
+
+  redirectPath = () => {
+    window.alert("Video Published!");
+    window.location.href = "/";
+  };
+
   render() {
     const image = "http://localhost:8080/images/Upload-video-preview.jpg";
     const previewImg = image.includes("http") ? image : `${API_URL}/${image}`;
+
     return (
       <>
         <div className="upload">
@@ -90,10 +96,16 @@ class VideoUploadPage extends React.Component {
                 ></input>
               </div>
               <div className="upload__tablet-layout">
-                <Link className="upload__cancel" to={`/`}>
-                  CANCEL
-                </Link>
-                <button type="submit" className="upload__button">
+                <button
+                  type="submit"
+                  className="upload__button"
+                  // onClick={
+                  //   this.state.posted
+                  //     ? () => (window.location.href = "/")
+                  //     : alert("hello")
+                  // }
+                  //onClick={this.redirectPath()}
+                >
                   PUBLISH
                   <img
                     className="upload__icon"
@@ -101,15 +113,23 @@ class VideoUploadPage extends React.Component {
                     alt="upload-icon"
                   ></img>
                 </button>
+                <div className="upload__cancel-box">
+                  <Link className="upload__cancel" to={`/`}>
+                    CANCEL
+                  </Link>
+                </div>
               </div>
               {/* <Link className="upload__link upload__button" onClick= {()=> alert("Video Published!")}  to={`/`}>  */}
 
               {/* </Link> */}
             </form>
 
-            {this.state.posted ? (
-              <div className="upload__success">Video Published!</div>
-            ) : null}
+            {this.state.posted
+              ? this.redirectPath()
+              : // <Redirect to="/"></Redirect>
+
+                // <div className="upload__success">Video Published!</div>
+                null}
           </div>
         </div>
       </>

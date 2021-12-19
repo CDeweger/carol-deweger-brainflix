@@ -122,7 +122,7 @@
     }
     @include desktop {
       width: 12.5vw;
-      margin-top: 1.8rem;
+      margin-top: 1.5rem;
     }
   }
   &__link {
@@ -138,33 +138,38 @@
     }
   }
 
+  &__cancel-box {
+    @include flex(center, center, _);
+    margin-top: 3rem;
+    @include tablet {
+      margin-top: 0;
+      margin-right: 4rem;
+    }
+  }
+
   &__cancel {
     text-decoration: none;
     border: none;
     background-color: white;
-    position: absolute;
     color: $primary-color2;
     @include font-demi;
-    top: 120%;
-    left: 41%;
+
     padding-bottom: 2rem;
     font-size: 1rem;
     @include tablet {
-      position: relative;
-      margin-top: 2.5rem;
+      margin-top: 2.8rem;
       font-size: 0.8rem;
       padding-bottom: 2rem;
     }
     @include desktop {
-      left: 62%;
-      top: 120%;
+      margin-top: 2.5rem;
     }
   }
 
   &__tablet-layout {
     @include tablet {
       border-top: 2px $secondary-color3 solid;
-      @include flex(_, _, _);
+      @include flex(flex-start, _, row-reverse);
       @include desktop {
         margin-top: -1rem;
       }
@@ -182,9 +187,14 @@
 }
 
 .form__desktop-layout {
+  margin-top: -1.5rem;
+  @include tablet {
+    margin-top: 0.5rem;
+  }
+
   @include desktop {
     position: absolute;
-    top: -255%;
+    top: -260%;
     left: 30%;
   }
 }
