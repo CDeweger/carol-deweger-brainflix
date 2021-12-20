@@ -25,14 +25,12 @@ router.get("/videos", (_req, res) => {
     image: videoInfo.image,
   }));
   res.send(videosData);
-  console.log(res);
 });
 
 // GET /videos/:id
 router.get("/videos/:id", (req, res) => {
   const videosData = readFile();
   const videoId = req.params.id;
-  console.log(videoId);
 
   res.send(
     videosData
@@ -54,7 +52,7 @@ router.post("/videos", (req, res) => {
       channel: "Carol DeWeger",
       image: SERVER_URL + "/images/upload-video-preview.jpg",
       views: Math.floor(Math.random() * 1000) + 1,
-      likes: Math.floor(Math.random() * 1000) + 1,
+      likes: Math.floor(Math.random() * 100) + 1,
       duration: "3:30",
       video: "https://project-2-api.herokuapp.com/stream",
       timestamp: Date.now(),

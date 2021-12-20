@@ -274,18 +274,5 @@
       }
     ],
     "id": "76ca28c0-7dea-4553-887f-8e5129a80fc3"
-  },
-  {
-    "title": "test video",
-    "description": "test video content",
-    "id": "b965e587-351a-4b1a-9502-54cd2c560c71",
-    "channel": "Carol DeWeger",
-    "image": "http://localhost:8080/images/upload-video-preview.jpg",
-    "views": 139,
-    "likes": 91,
-    "duration": "3:30",
-    "video": "https://project-2-api.herokuapp.com/stream",
-    "timestamp": 1639970143688,
-    "comments": []
   }
 ]
