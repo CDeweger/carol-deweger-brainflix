@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import publishImg from "../../assets/icons/publish.svg";
 import "./VideoUploadPage.scss";
@@ -8,13 +8,6 @@ const API_URL = process.env.REACT_APP_API_URL;
 const url = "http://localhost:8080/videos";
 
 class VideoUploadPage extends React.Component {
-  // scroll = () => {
-  //   window.scrollTo({
-  //     bottom: 0,
-  //     behavior: "smooth",
-  //   });
-  // };
-
   state = {
     posted: false,
   };
@@ -35,6 +28,7 @@ class VideoUploadPage extends React.Component {
     e.target.reset();
   };
 
+  //this is the function to alert and redirect when video is published
   redirectPath = () => {
     window.alert("Video Published!");
     window.location.href = "/";
@@ -96,16 +90,7 @@ class VideoUploadPage extends React.Component {
                 ></input>
               </div>
               <div className="upload__tablet-layout">
-                <button
-                  type="submit"
-                  className="upload__button"
-                  // onClick={
-                  //   this.state.posted
-                  //     ? () => (window.location.href = "/")
-                  //     : alert("hello")
-                  // }
-                  //onClick={this.redirectPath()}
-                >
+                <button type="submit" className="upload__button">
                   PUBLISH
                   <img
                     className="upload__icon"
@@ -119,17 +104,9 @@ class VideoUploadPage extends React.Component {
                   </Link>
                 </div>
               </div>
-              {/* <Link className="upload__link upload__button" onClick= {()=> alert("Video Published!")}  to={`/`}>  */}
-
-              {/* </Link> */}
             </form>
 
-            {this.state.posted
-              ? this.redirectPath()
-              : // <Redirect to="/"></Redirect>
-
-                // <div className="upload__success">Video Published!</div>
-                null}
+            {this.state.posted ? this.redirectPath() : null}
           </div>
         </div>
       </>
